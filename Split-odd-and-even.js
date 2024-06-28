@@ -20,3 +20,30 @@ function splitOddAndEven(n) {
 }
 
 // or
+
+function splitOddAndEven(n) {
+  n = n.toString().split('');
+  
+  let array = [];
+  let result = '';
+  let lastEven = null;
+  
+  for (let i in n)
+  {
+    let even = n[i]%2 === 0;
+    
+    if (even === lastEven)
+      result += n[i].toString();
+    else
+    {
+      if (lastEven !== null)
+        array.push(parseInt(result));
+      
+      lastEven = even;
+      result = n[i].toString();
+    }
+  }
+  array.push(parseInt(result));
+
+  return array;
+}
