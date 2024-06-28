@@ -11,3 +11,6 @@ Examples:
   splitOddAndEven(135246)  ===  [135,246]
   splitOddAndEven(123456)  ===  [1,2,3,4,5,6]
 */
+
+
+// Solution
